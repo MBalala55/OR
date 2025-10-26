@@ -1,0 +1,58 @@
+knjiga_id,naziv,autor,godina_izdanja,izdavac,mjesto_izdanja,isbn,broj_stranica,jezik,naziv_zanra,broj_primjerka,dostupnost
+1,Hamlet,William Shakespeare,2018,Bulaja naklada,Zagreb,9789533284378,180,hrvatski,Klasična književnost,1,Dostupna
+1,Hamlet,William Shakespeare,2018,Bulaja naklada,Zagreb,9789533284378,180,hrvatski,Drama,1,Dostupna
+1,Hamlet,William Shakespeare,2018,Bulaja naklada,Zagreb,9789533284378,180,hrvatski,Tragedija,1,Dostupna
+1,Hamlet,William Shakespeare,2018,Bulaja naklada,Zagreb,9789533284378,180,hrvatski,Klasična književnost,2,Dostupna
+1,Hamlet,William Shakespeare,2018,Bulaja naklada,Zagreb,9789533284378,180,hrvatski,Drama,2,Dostupna
+1,Hamlet,William Shakespeare,2018,Bulaja naklada,Zagreb,9789533284378,180,hrvatski,Tragedija,2,Dostupna
+2,Kralj Edip,Sophocles,2011,Bulaja naklada,Zagreb,9789533280806,116,hrvatski,Klasična književnost,1,Nedostupna
+2,Kralj Edip,Sophocles,2011,Bulaja naklada,Zagreb,9789533280806,116,hrvatski,Drama,1,Nedostupna
+2,Kralj Edip,Sophocles,2011,Bulaja naklada,Zagreb,9789533280806,116,hrvatski,Tragedija,1,Nedostupna
+2,Kralj Edip,Sophocles,2011,Bulaja naklada,Zagreb,9789533280806,116,hrvatski,Klasična književnost,2,Nedostupna
+2,Kralj Edip,Sophocles,2011,Bulaja naklada,Zagreb,9789533280806,116,hrvatski,Drama,2,Nedostupna
+2,Kralj Edip,Sophocles,2011,Bulaja naklada,Zagreb,9789533280806,116,hrvatski,Tragedija,2,Nedostupna
+3,Rat i mir,Lav Nikolaevič Tolstoj,2015,Bulaja naklada,Zagreb,9789533283197,915,hrvatski,Klasična književnost,1,Dostupna
+3,Rat i mir,Lav Nikolaevič Tolstoj,2015,Bulaja naklada,Zagreb,9789533283197,915,hrvatski,Epika,1,Dostupna
+3,Rat i mir,Lav Nikolaevič Tolstoj,2015,Bulaja naklada,Zagreb,9789533283197,915,hrvatski,Povijesni roman,1,Dostupna
+3,Rat i mir,Lav Nikolaevič Tolstoj,2015,Bulaja naklada,Zagreb,9789533283197,915,hrvatski,Klasična književnost,2,Nedostupna
+3,Rat i mir,Lav Nikolaevič Tolstoj,2015,Bulaja naklada,Zagreb,9789533283197,915,hrvatski,Epika,2,Nedostupna
+3,Rat i mir,Lav Nikolaevič Tolstoj,2015,Bulaja naklada,Zagreb,9789533283197,915,hrvatski,Povijesni roman,2,Nedostupna
+4,1984.,George Orwell,2015,Šareni dućan,Koprivnica,9789533200903,350,hrvatski,Znanstvena fantastika,1,Nedostupna
+4,1984.,George Orwell,2015,Šareni dućan,Koprivnica,9789533200903,350,hrvatski,Politički roman,1,Nedostupna
+4,1984.,George Orwell,2015,Šareni dućan,Koprivnica,9789533200903,350,hrvatski,Distopija,1,Nedostupna
+4,1984.,George Orwell,2015,Šareni dućan,Koprivnica,9789533200903,350,hrvatski,Znanstvena fantastika,2,Dostupna
+4,1984.,George Orwell,2015,Šareni dućan,Koprivnica,9789533200903,350,hrvatski,Politički roman,2,Dostupna
+4,1984.,George Orwell,2015,Šareni dućan,Koprivnica,9789533200903,350,hrvatski,Distopija,2,Dostupna
+5,Zločin i kazna,Fedor Mihaljevič Dostoevskij,2003,Mozaik knjiga,Zagreb,9789531961964,476,hrvatski,Klasična književnost,1,Dostupna
+5,Zločin i kazna,Fedor Mihaljevič Dostoevskij,2003,Mozaik knjiga,Zagreb,9789531961964,476,hrvatski,Psihološki roman,1,Dostupna
+5,Zločin i kazna,Fedor Mihaljevič Dostoevskij,2003,Mozaik knjiga,Zagreb,9789531961964,476,hrvatski,Roman,1,Dostupna
+6,Božanstvena komedija: Raj,Dante Alighieri,2023,Matica hrvatska,Zagreb,9789533412696,686,hrvatski,Klasična književnost,1,Nedostupna
+6,Božanstvena komedija: Raj,Dante Alighieri,2023,Matica hrvatska,Zagreb,9789533412696,686,hrvatski,Alegorija,1,Nedostupna
+6,Božanstvena komedija: Raj,Dante Alighieri,2023,Matica hrvatska,Zagreb,9789533412696,686,hrvatski,Epika,1,Nedostupna
+7,Gospodar prstenova: Prstenova družina,John Ronald Reuel Tolkien,2018,Lumen izdavaštvo,Zagreb,9789533421544,516,hrvatski,Epika,1,Dostupna
+7,Gospodar prstenova: Prstenova družina,John Ronald Reuel Tolkien,2018,Lumen izdavaštvo,Zagreb,9789533421544,516,hrvatski,Avantura,1,Dostupna
+7,Gospodar prstenova: Prstenova družina,John Ronald Reuel Tolkien,2018,Lumen izdavaštvo,Zagreb,9789533421544,516,hrvatski,Fantastika,1,Dostupna
+8,Životinjska farma,George Orwell,2004,Globus media,Zagreb,9789537160246,95,hrvatski,Povijesni roman,1,Dostupna
+8,Životinjska farma,George Orwell,2004,Globus media,Zagreb,9789537160246,95,hrvatski,Alegorija,1,Dostupna
+8,Životinjska farma,George Orwell,2004,Globus media,Zagreb,9789537160246,95,hrvatski,Satira,1,Dostupna
+9,Životinjska farma,George Orwell,2022,Egmont,Zagreb,9789531324977,136,hrvatski,Povijesni roman,1,Dostupna
+9,Životinjska farma,George Orwell,2022,Egmont,Zagreb,9789531324977,136,hrvatski,Alegorija,1,Dostupna
+9,Životinjska farma,George Orwell,2022,Egmont,Zagreb,9789531324977,136,hrvatski,Satira,1,Dostupna
+10,Životinjska farma,George Orwell,2024,Egmont,Zagreb,9789531324977,136,hrvatski,Povijesni roman,1,Dostupna
+10,Životinjska farma,George Orwell,2024,Egmont,Zagreb,9789531324977,136,hrvatski,Alegorija,1,Dostupna
+10,Životinjska farma,George Orwell,2024,Egmont,Zagreb,9789531324977,136,hrvatski,Satira,1,Dostupna
+11,Gulliverova putovanja,Jonathan Swift,2018,Bulaja naklada,Zagreb,9789533284309,226,hrvatski,Avantura,1,Dostupna
+11,Gulliverova putovanja,Jonathan Swift,2018,Bulaja naklada,Zagreb,9789533284309,226,hrvatski,Fantastika,1,Dostupna
+11,Gulliverova putovanja,Jonathan Swift,2018,Bulaja naklada,Zagreb,9789533284309,226,hrvatski,Satira,1,Dostupna
+12,Gulliverova putovanja,Jonathan Swift,1997,Školska knjiga,Zagreb,9789530604076,153,hrvatski,Avantura,1,Nedostupna
+12,Gulliverova putovanja,Jonathan Swift,1997,Školska knjiga,Zagreb,9789530604076,153,hrvatski,Fantastika,1,Nedostupna
+12,Gulliverova putovanja,Jonathan Swift,1997,Školska knjiga,Zagreb,9789530604076,153,hrvatski,Satira,1,Nedostupna
+13,Gulliverova putovanja,Jonathan Swift,2000,Zagrebačka stvarnost,Zagreb,9789531920540,112,hrvatski,Avantura,1,Nedostupna
+13,Gulliverova putovanja,Jonathan Swift,2000,Zagrebačka stvarnost,Zagreb,9789531920540,112,hrvatski,Fantastika,1,Nedostupna
+13,Gulliverova putovanja,Jonathan Swift,2000,Zagrebačka stvarnost,Zagreb,9789531920540,112,hrvatski,Satira,1,Nedostupna
+14,Mali princ,Antoine de Saint-Exupéry,2016,Mozaik knjiga,Zagreb,9789531410786,89,hrvatski,Filozofska priča,1,Dostupna
+14,Mali princ,Antoine de Saint-Exupéry,2016,Mozaik knjiga,Zagreb,9789531410786,89,hrvatski,Bajka,1,Dostupna
+14,Mali princ,Antoine de Saint-Exupéry,2016,Mozaik knjiga,Zagreb,9789531410786,89,hrvatski,Fantastika,1,Dostupna
+15,Mali princ,Antoine de Saint-Exupéry,2021,Mala zvona,Zagreb,9789538313356,60,hrvatski,Filozofska priča,1,Dostupna
+15,Mali princ,Antoine de Saint-Exupéry,2021,Mala zvona,Zagreb,9789538313356,60,hrvatski,Bajka,1,Dostupna
+15,Mali princ,Antoine de Saint-Exupéry,2021,Mala zvona,Zagreb,9789538313356,60,hrvatski,Fantastika,1,Dostupna
