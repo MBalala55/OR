@@ -9,3 +9,37 @@ Skup podataka knjižnica u repozitoriju priloženi su u JSON te CSV formatu te k
 
 
 ## Metapodaci
+**Naziv** knjižnica
+**Autor:** Matko Balala
+**Jezik podataka:** hrvatski
+**Format datoteka:** JSON, CSV
+**Broj zapisa:** 15
+**Broj atribura:** 11
+**Roditelj-dijete veza** knjiga - primjerci
+**Datum izrade** 25. listopada 2025.
+**Baza podataka** PostgreSQL
+
+**Opis atributa**
+| Atribut | Opis |
+| id | Jedinstveni identifikator knjige |
+| isbn | Međunarodni standardni broj knjige |
+| autor | Ime i prezime autora knjieg |
+| jezik | Jezik na kojem je knjiga napisana |
+| naziv | Naslov knjige |
+| izdavac | Naziv izdavačke kuće |
+| zanrovi | Popis žanrova kojima knjiga pripada |
+| primjerci | Popis dostupnih primjeraka (broj primjerka i dostupnost) |
+| broj_stranica | Broj stranica koje knjiga sadrži |
+| godina_izdanja | Godina kada je knjiga izdana |
+| mjesto_izdanaja | Mjesto u kojem je knjiga izdana |
+
+**Licencija:** 
+
+**Datoteke u repozitoriju:**
+- knjižnica.json
+- knjižnica.csv
+- README.md
+- LICENSE
+- dump.sql
+
+**Verzija:** 1.0
