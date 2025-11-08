@@ -12,13 +12,21 @@ Skup podataka knjižnica sastoji se od deset različitih književnih djela te ne
 
 ## Metapodaci
 **Naziv skupa podataka:** knjižnica
+
 **Autor:** Matko Balala
+
 **Jezik podataka:** hrvatski
+
 **Format datoteka:** JSON, CSV
+
 **Broj zapisa:** 15
+
 **Broj atributa:** 11
+
 **Roditelj-dijete veza:** knjiga - primjerci
+
 **Datum izrade:** 25. listopada 2025.
+
 **Baza podataka:** PostgreSQL
 
 ---
