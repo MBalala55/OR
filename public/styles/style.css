@@ -1,0 +1,178 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    gap: 1em;
+}
+
+header, footer {
+    background-color: burlywood;
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+footer h2 {
+    font-size: 1.5em;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer > * {
+    margin: 0;
+}
+
+header h1 {
+    font-size: 4em;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.a .aa h2{
+    font-size: 2em;
+}
+
+.a .aa ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.a .aa li {
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+}
+
+
+.ab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.ab p {
+    font-size: 20px;
+}
+
+.aba {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.aba button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.aba button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.ac h2 {
+    font-size: 2em;
+}
+
+.ac p {
+    font-size: 20px;
+}
+
+.ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.ad .ada {
+    width: 90%;
+    overflow-x: auto;
+}
+
+#atrTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+#atrTable th, #atrTable td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+}
+
+#atrTable th {
+    background-color: #4CAF50;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+#atrTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1em;
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 0 1em;
+}
+
+
+.a > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1em;
+    padding: 1em;
+
+    background-color: lightskyblue;
+    border-radius: 15px;
+
+    box-sizing: border-box;
+}
+
+div > * {
+    margin: 0;
+}

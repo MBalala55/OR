@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knjižnica</title>
+    <meta name="author" content="Matko Balala">
+    <meta name="description" content="Otvoreni skup podataka 'Knjižnica' koji sadrži informacije o knjigama, njihovim žanrovima i primjercima dostupnim u knjižnici.">
+    <meta name="language" content="hr">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Knjižnica</h1>
+    </header>
+
+    <div class="a">
+        <div class="aa">
+            <h2>Metapodaci o skupu podataka</h2>
+            <ul>
+                <li>Naziv skupa podataka: Knjižnica</li>
+                <li>Autor: Matko Balala</li>
+                <li>Jezik podataka: hrvatski</li>
+                <li>Format datoteka: JSON, CSV</li>
+                <li>Broj zapisa: 15</li>
+                <li>Broj atributa: 11</li>
+                <li>Roditelj–dijete veza: knjiga – primjerci</li>
+                <li>Datum izrade: 25. listopada 2025.</li>
+                <li>Baza podataka: PostgreSQL</li>
+            </ul>
+        </div>
+    
+        <div class="ab">
+            <p>Podaci o knjigama mogu se preuzeti u sljedećim formatima:</p>
+            <div class="aba">
+                <button><a href="/datajson" target="_blank">JSON</a></button>
+                <button><a href="/datacsv" target="_blank">CSV</a></button>
+            </div>
+        
+            <p>Tablični prikaz podataka s mogučonšću filtriranja</p>
+            <div class="aba">
+                <button><a href="/datatable">Pregled tablice</a></button>
+            </div>
+        </div>
+    
+        <div class="ac">
+            <h2>Opis skupa podataka</h2>
+            <p>
+                Skup podataka knjižnica sastoji se od deset različitih književnih djela te neka od njih dijele autora.
+                U skupu se nalazi više od 10 zapisa jer za neke od djela postoji više identičnih primjeraka ili postoji
+                par različitih izdanja, istih ili različitih izdavača. Skup sadrži sljedeće podatke o knjigama:
+                id, isbn, autor, jezik, naziv, izdavac, žanrovi, primjerci (koji sadrži podatak o dostupnosti i broju primjerka), broj stranica, godina izdanja, mjesto izdanja.
+            </p>
+        </div>
+    
+        <div class="ad">
+            <h2>Opis atributa</h2>
+        
+            <div class="ada">
+                <table id="atrTable">
+                    <thead>
+                        <tr>
+                            <th>Atribut</th>
+                            <th>Opis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>id</td>
+                            <td>Jedinstveni identifikator knjige</td>
+                        </tr>
+                        <tr>
+                            <td>isbn</td>
+                            <td>Međunarodni standardni broj knjige</td>
+                        </tr>
+                        <tr>
+                            <td>autor</td>
+                            <td>Ime i prezime autora knjige</td>
+                        </tr>
+                        <tr>
+                            <td>jezik</td>
+                            <td>Jezik na kojem je knjiga napisana</td>
+                        </tr>
+                        <tr>
+                            <td>naziv</td>
+                            <td>Naslov knjige</td>
+                        </tr>
+                        <tr>
+                            <td>izdavac</td>
+                            <td>Naziv izdavačke kuće</td>
+                        </tr>
+                        <tr>
+                            <td>zanrovi</td>
+                            <td>Popis žanrova kojima knjiga pripada</td>
+                        </tr>
+                        <tr>
+                            <td>primjerci</td>
+                            <td>Popis dostupnih primjeraka (broj primjerka i dostupnost)</td>
+                        </tr>
+                        <tr>
+                            <td>broj_stranica</td>
+                            <td>Broj stranica koje knjiga sadrži</td>
+                        </tr>
+                        <tr>
+                            <td>godina_izdanja</td>
+                            <td>Godina kada je knjiga izdana</td>
+                        </tr>
+                        <tr>
+                            <td>mjesto_izdanja</td>
+                            <td>Mjesto u kojem je knjiga izdana</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Licencija</h2>
+        <p>Apache License, Version 2.0 (January 2004)</p>
+        <a href="http://www.apache.org/licenses/">Link licencije</a>
+    </footer>
+</body>
+</html>

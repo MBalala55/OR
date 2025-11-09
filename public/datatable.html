@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knjižnica - tablica</title>
+    <meta name="author" content="Matko Balala">
+    <meta name="description" content="Otvoreni skup podataka 'Knjižnica' koji sadrži informacije o knjigama, njihovim žanrovima i primjercima dostupnim u knjižnici.">
+    <meta name="language" content="hr">
+    <link rel="stylesheet" href="/styles/style2.css">
+</head>
+<body>
+    <h1>Pregled knjiga</h1>
+
+    <h3>Filtriraj knjige</h3>
+    
+    <form id="filter">
+        <input type="text" id="filterInput" placeholder="Unesi pojam za pretraživanje">
+        <select id="filterAttribute">
+            <option value="all">Svi atributi</option>
+            <option value="naziv">Naziv</option>
+            <option value="autor">Autor</option>
+            <option value="zanr">Žanr</option>
+            <option value="godina_izdanja">Godina izdanja</option>
+            <option value="isbn">ISBN</option>
+            <option value="dostupnost">Dostupnost</option>
+        </select>
+        <button type="submit">Filtriraj</button>
+    </form>
+
+    <button id="downloadJson">Preuzmi filtrirani JSON</button>
+    <button id="downloadCsv">Preuzmi filtrirani CSV</button>
+
+    <table id="tablica">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Naziv</th>
+                <th>Autor</th>
+                <th>Godina izdanja</th>
+                <th>Izdavač</th>
+                <th>Mjesto izdanja</th>
+                <th>ISBN</th>
+                <th>Broj stranica</th>
+                <th>Jezik</th>
+                <th>Žanr</th>
+                <th>Broj primjerka</th>
+                <th>Dostupnost</th>
+            </tr>
+        </thead>
+        <tbody id="podaci">
+        </tbody>
+    </table>
+
+    <script src="scripts/datatable.js"></script>
+</body>
+</html>
