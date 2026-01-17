@@ -1,0 +1,48 @@
+fetch('/api/knjige', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    naziv: "Nova Knjiga",
+    autor: "Ja",
+    godina_izdanja: 2026,
+    izdavac: "nema izdavaca",
+    mjesto_izdanja: "kod kuce",
+    isbn: "123321555",
+    broj_stranica: 123,
+    jezik: "Hrvatski",
+    zanrovi: ["Pustolovni"],
+    primjerci: [{ broj_primjerka: 1, dostupnost: "Dostupna" }]
+  })
+})
+.then(res => res.json())
+.then(data => console.log('Dodano:', data));
+
+-----------------
+
+fetch('/api/knjige/1', {
+  method: 'PUT',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    naziv: "Promijenjen Naziv",
+    autor: "Promijenjen Autor",
+    godina_izdanja: 2099,
+    izdavac: "Promjeni me",
+    mjesto_izdanja: "Kozarevac",
+    isbn: "111222333",
+    broj_stranica: 250,
+    jezik: "Hrvatski",
+    zanrovi: ["Drama"],
+    primjerci: [{ broj_primjerka: 99, dostupnost: "Nedostupna" }]
+  })
+})
+.then(res => res.json())
+.then(data => console.log('Ažurirano:', data));
+
+-----------------
+
+fetch('/api/knjige/1', { method: 'DELETE' })
+  .then(res => res.json())
+  .then(data => console.log('Obrisano:', data));
+
+
+koji endpointi, sto je sto u jednom

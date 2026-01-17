@@ -1,0 +1,168 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Knjižnica API",
+    "version": "1.0.0",
+    "description": "API za upravljanje kolekcijom knjiga u knjižnici.",
+    "contact": {
+      "name": "Matko",
+      "email": "matko.balala@fer.hr"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Lokalni razvojni poslužitelj"
+    }
+  ],
+  "paths": {
+    "/api/knjige": {
+      "get": {
+        "summary": "Dohvaćanje cjelokupne kolekcije knjiga",
+        "responses": {
+          "200": {
+            "description": "Uspješan dohvat svih knjiga",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/StandardResponse" }
+              }
+            }
+          },
+          "500": { "description": "Greška pri dohvaćanju podataka" }
+        }
+      },
+      "post": {
+        "summary": "Unos nove knjige u kolekciju",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/KnjigaInput" }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Knjiga uspješno kreirana",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/StandardResponse" }
+              }
+            }
+          },
+          "400": { "description": "Nedostaju obavezni podaci" },
+          "500": { "description": "Greška pri upisu u bazu" }
+        }
+      }
+    },
+    "/api/knjige/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "integer" },
+          "description": "Jedinstveni ID knjige"
+        }
+      ],
+      "get": {
+        "summary": "Dohvat knjige po ID-u",
+        "responses": {
+          "200": { "description": "Knjiga pronađena", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/StandardResponse" } } } },
+          "400": { "description": "Neispravan format ID-a" },
+          "404": { "description": "Knjiga s tim ID-om ne postoji" }
+        }
+      },
+      "put": {
+        "summary": "Ažuriranje knjige",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/KnjigaInput" } } }
+        },
+        "responses": {
+          "200": { "description": "Uspješno ažurirano" },
+          "400": { "description": "Neispravan ID ili podaci" },
+          "404": { "description": "Knjiga ne postoji" }
+        }
+      },
+      "delete": {
+        "summary": "Brisanje knjige",
+        "responses": {
+          "200": { "description": "Uspješno obrisano" },
+          "404": { "description": "Knjiga s tim ID-om ne postoji" }
+        }
+      }
+    },
+    "/api/knjige/autor/{ime}": {
+      "get": {
+        "summary": "Pretraga po autoru",
+        "parameters": [{ "name": "ime", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": {
+          "200": { "description": "Pronađene knjige autora" },
+          "404": { "description": "Nisu pronađene knjige tog autora" }
+        }
+      }
+    },
+    "/api/knjige/naslov/{naziv}": {
+      "get": {
+        "summary": "Pretraga po naslovu",
+        "parameters": [{ "name": "naziv", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": {
+          "200": { "description": "Pronađene knjige pod tim naslovom" },
+          "404": { "description": "Nisu pronađene knjige tog naslova" }
+        }
+      }
+    },
+    "/api/knjige/status/dostupne": {
+      "get": { "summary": "Popis dostupnih knjiga", "responses": { "200": { "description": "OK" }, "404": { "description": "Nema dostupnih knjiga" } } }
+    },
+    "/api/knjige/status/nedostupne": {
+      "get": { "summary": "Popis nedostupnih knjiga", "responses": { "200": { "description": "OK" }, "404": { "description": "Nema nedostupnih knjiga" } } }
+    },
+    "/openapi.json": {
+      "get": { "summary": "Dohvat same OpenAPI specifikacije", "responses": { "200": { "description": "Vraća openapi.json datoteku" } } }
+    }
+  },
+  "components": {
+    "schemas": {
+      "StandardResponse": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string", "example": "OK" },
+          "message": { "type": "string", "example": "Uspješno obavljena operacija" },
+          "response": { "type": "array", "items": { "type": "object" }, "nullable": true }
+        }
+      },
+      "KnjigaInput": {
+        "type": "object",
+        "required": ["naziv", "autor", "zanrovi", "primjerci"],
+        "properties": {
+          "naziv": { "type": "string", "example": "Glembajevi" },
+          "autor": { "type": "string", "example": "Miroslav Krleža" },
+          "godina_izdanja": { "type": "integer", "example": 1929 },
+          "izdavac": { "type": "string", "example": "Zora" },
+          "mjesto_izdanja": { "type": "string", "example": "Zagreb" },
+          "isbn": { "type": "string", "example": "978-953-123-456-7" },
+          "broj_stranica": { "type": "integer", "example": 210 },
+          "jezik": { "type": "string", "example": "Hrvatski" },
+          "zanrovi": { "type": "array", "items": { "type": "string" }, "example": ["Drama"] },
+          "primjerci": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "broj_primjerka": { "type": "integer" },
+                "dostupnost": { "type": "string" }
+              }
+            },
+            "example": [{ "broj_primjerka": 101, "dostupnost": "Dostupna" }]
+          }
+        }
+      }
+    }
+  }
+}
