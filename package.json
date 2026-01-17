@@ -12,14 +12,9 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-<<<<<<< HEAD
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "express-openid-connect": "^2.19.4",
     "pg": "^8.17.1"
-=======
-    "express": "^5.1.0",
-    "pg": "^8.16.3"
->>>>>>> e6e2a3043341e7142b8819ae73e9201b35f2030a
   }
 }
