@@ -1,0 +1,348 @@
+[
+    {
+        "id": 1,
+        "isbn": "9789533284378",
+        "autor": "William Shakespeare",
+        "jezik": "hrvatski",
+        "naziv": "Hamlet",
+        "izdavac": "Bulaja naklada",
+        "zanrovi": [
+            "Tragedija",
+            "Drama",
+            "Klasična književnost"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Dostupna",
+                "broj_primjerka": 1
+            },
+            {
+                "dostupnost": "Dostupna",
+                "broj_primjerka": 2
+            }
+        ],
+        "broj_stranica": 180,
+        "godina_izdanja": 2018,
+        "mjesto_izdanja": "Zagreb"
+    },
+    {
+        "id": 2,
+        "isbn": "9789533280806",
+        "autor": "Sophocles",
+        "jezik": "hrvatski",
+        "naziv": "Kralj Edip",
+        "izdavac": "Bulaja naklada",
+        "zanrovi": [
+            "Tragedija",
+            "Drama",
+            "Klasična književnost"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Nedostupna",
+                "broj_primjerka": 1
+            },
+            {
+                "dostupnost": "Nedostupna",
+                "broj_primjerka": 2
+            }
+        ],
+        "broj_stranica": 116,
+        "godina_izdanja": 2011,
+        "mjesto_izdanja": "Zagreb"
+    },
+    {
+        "id": 3,
+        "isbn": "9789533283197",
+        "autor": "Lav Nikolaevič Tolstoj",
+        "jezik": "hrvatski",
+        "naziv": "Rat i mir",
+        "izdavac": "Bulaja naklada",
+        "zanrovi": [
+            "Povijesni roman",
+            "Epika",
+            "Klasična književnost"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Dostupna",
+                "broj_primjerka": 1
+            },
+            {
+                "dostupnost": "Nedostupna",
+                "broj_primjerka": 2
+            }
+        ],
+        "broj_stranica": 915,
+        "godina_izdanja": 2015,
+        "mjesto_izdanja": "Zagreb"
+    },
+    {
+        "id": 4,
+        "isbn": "9789533200903",
+        "autor": "George Orwell",
+        "jezik": "hrvatski",
+        "naziv": "1984.",
+        "izdavac": "Šareni dućan",
+        "zanrovi": [
+            "Distopija",
+            "Politički roman",
+            "Znanstvena fantastika"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Nedostupna",
+                "broj_primjerka": 1
+            },
+            {
+                "dostupnost": "Dostupna",
+                "broj_primjerka": 2
+            }
+        ],
+        "broj_stranica": 350,
+        "godina_izdanja": 2015,
+        "mjesto_izdanja": "Koprivnica"
+    },
+    {
+        "id": 5,
+        "isbn": "9789531961964",
+        "autor": "Fedor Mihaljevič Dostoevskij",
+        "jezik": "hrvatski",
+        "naziv": "Zločin i kazna",
+        "izdavac": "Mozaik knjiga",
+        "zanrovi": [
+            "Roman",
+            "Psihološki roman",
+            "Klasična književnost"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Dostupna",
+                "broj_primjerka": 1
+            }
+        ],
+        "broj_stranica": 476,
+        "godina_izdanja": 2003,
+        "mjesto_izdanja": "Zagreb"
+    },
+    {
+        "id": 6,
+        "isbn": "9789533412696",
+        "autor": "Dante Alighieri",
+        "jezik": "hrvatski",
+        "naziv": "Božanstvena komedija: Raj",
+        "izdavac": "Matica hrvatska",
+        "zanrovi": [
+            "Epika",
+            "Alegorija",
+            "Klasična književnost"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Nedostupna",
+                "broj_primjerka": 1
+            }
+        ],
+        "broj_stranica": 686,
+        "godina_izdanja": 2023,
+        "mjesto_izdanja": "Zagreb"
+    },
+    {
+        "id": 7,
+        "isbn": "9789533421544",
+        "autor": "John Ronald Reuel Tolkien",
+        "jezik": "hrvatski",
+        "naziv": "Gospodar prstenova: Prstenova družina",
+        "izdavac": "Lumen izdavaštvo",
+        "zanrovi": [
+            "Fantastika",
+            "Avantura",
+            "Epika"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Dostupna",
+                "broj_primjerka": 1
+            }
+        ],
+        "broj_stranica": 516,
+        "godina_izdanja": 2018,
+        "mjesto_izdanja": "Zagreb"
+    },
+    {
+        "id": 8,
+        "isbn": "9789537160246",
+        "autor": "George Orwell",
+        "jezik": "hrvatski",
+        "naziv": "Životinjska farma",
+        "izdavac": "Globus media",
+        "zanrovi": [
+            "Satira",
+            "Alegorija",
+            "Povijesni roman"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Dostupna",
+                "broj_primjerka": 1
+            }
+        ],
+        "broj_stranica": 95,
+        "godina_izdanja": 2004,
+        "mjesto_izdanja": "Zagreb"
+    },
+    {
+        "id": 9,
+        "isbn": "9789531324977",
+        "autor": "George Orwell",
+        "jezik": "hrvatski",
+        "naziv": "Životinjska farma",
+        "izdavac": "Egmont",
+        "zanrovi": [
+            "Satira",
+            "Alegorija",
+            "Povijesni roman"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Dostupna",
+                "broj_primjerka": 1
+            }
+        ],
+        "broj_stranica": 136,
+        "godina_izdanja": 2022,
+        "mjesto_izdanja": "Zagreb"
+    },
+    {
+        "id": 10,
+        "isbn": "9789531324977",
+        "autor": "George Orwell",
+        "jezik": "hrvatski",
+        "naziv": "Životinjska farma",
+        "izdavac": "Egmont",
+        "zanrovi": [
+            "Satira",
+            "Alegorija",
+            "Povijesni roman"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Dostupna",
+                "broj_primjerka": 1
+            }
+        ],
+        "broj_stranica": 136,
+        "godina_izdanja": 2024,
+        "mjesto_izdanja": "Zagreb"
+    },
+    {
+        "id": 11,
+        "isbn": "9789533284309",
+        "autor": "Jonathan Swift",
+        "jezik": "hrvatski",
+        "naziv": "Gulliverova putovanja",
+        "izdavac": "Bulaja naklada",
+        "zanrovi": [
+            "Satira",
+            "Fantastika",
+            "Avantura"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Dostupna",
+                "broj_primjerka": 1
+            }
+        ],
+        "broj_stranica": 226,
+        "godina_izdanja": 2018,
+        "mjesto_izdanja": "Zagreb"
+    },
+    {
+        "id": 12,
+        "isbn": "9789530604076",
+        "autor": "Jonathan Swift",
+        "jezik": "hrvatski",
+        "naziv": "Gulliverova putovanja",
+        "izdavac": "Školska knjiga",
+        "zanrovi": [
+            "Satira",
+            "Fantastika",
+            "Avantura"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Nedostupna",
+                "broj_primjerka": 1
+            }
+        ],
+        "broj_stranica": 153,
+        "godina_izdanja": 1997,
+        "mjesto_izdanja": "Zagreb"
+    },
+    {
+        "id": 13,
+        "isbn": "9789531920540",
+        "autor": "Jonathan Swift",
+        "jezik": "hrvatski",
+        "naziv": "Gulliverova putovanja",
+        "izdavac": "Zagrebačka stvarnost",
+        "zanrovi": [
+            "Satira",
+            "Fantastika",
+            "Avantura"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Nedostupna",
+                "broj_primjerka": 1
+            }
+        ],
+        "broj_stranica": 112,
+        "godina_izdanja": 2000,
+        "mjesto_izdanja": "Zagreb"
+    },
+    {
+        "id": 14,
+        "isbn": "9789531410786",
+        "autor": "Antoine de Saint-Exupéry",
+        "jezik": "hrvatski",
+        "naziv": "Mali princ",
+        "izdavac": "Mozaik knjiga",
+        "zanrovi": [
+            "Fantastika",
+            "Bajka",
+            "Filozofska priča"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Dostupna",
+                "broj_primjerka": 1
+            }
+        ],
+        "broj_stranica": 89,
+        "godina_izdanja": 2016,
+        "mjesto_izdanja": "Zagreb"
+    },
+    {
+        "id": 15,
+        "isbn": "9789538313356",
+        "autor": "Antoine de Saint-Exupéry",
+        "jezik": "hrvatski",
+        "naziv": "Mali princ",
+        "izdavac": "Mala zvona",
+        "zanrovi": [
+            "Fantastika",
+            "Bajka",
+            "Filozofska priča"
+        ],
+        "primjerci": [
+            {
+                "dostupnost": "Dostupna",
+                "broj_primjerka": 1
+            }
+        ],
+        "broj_stranica": 60,
+        "godina_izdanja": 2021,
+        "mjesto_izdanja": "Zagreb"
+    }
+]

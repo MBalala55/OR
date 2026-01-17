@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://raw.githubusercontent.com/MBalala55/OR/refs/heads/main/knji%C5%BEnica.json",
@@ -105,4 +106,113 @@
       }
     }
   }
+=======
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/MBalala55/OR/refs/heads/main/knji%C5%BEnica.json",
+  "type": "array",
+  "title": "Knjižnica",
+  "description": "Skup knjiga za otvoreno računarstvo",
+  "items": {
+    "type": "object",
+    "title": "Knjiga",
+    "description": "Objekt koji sadrži sve podatke o jednoj knjizi",
+    "required": [
+      "id",
+      "isbn",
+      "autor",
+      "jezik",
+      "naziv",
+      "izdavac",
+      "zanrovi",
+      "primjerci",
+      "broj_stranica",
+      "godina_izdanja",
+      "mjesto_izdanja"
+    ],
+    "properties": {
+      "id": {
+        "type": "number",
+        "title": "ID",
+        "description": "Jedinstveni identifikator knjige"
+      },
+      "isbn": {
+        "type": "string",
+        "title": "ISBN",
+        "description": "Međunarodni standardni broj knjige"
+      },
+      "autor": {
+        "type": "string",
+        "title": "Autor",
+        "description": "Ime i prezime autora knjige"
+      },
+      "jezik": {
+        "type": "string",
+        "title": "Jezik",
+        "description": "Jezik na kojem je knjiga napisana"
+      },
+      "naziv": {
+        "type": "string",
+        "title": "Naziv",
+        "description": "Naslov knjige"
+      },
+      "izdavac": {
+        "type": "string",
+        "title": "Izdavac",
+        "description": "Naziv izdavačke kuće"
+      },
+      "zanrovi": {
+        "type": "array",
+        "title": "Žanrovi",
+        "description": "Popis žanrova kojima knjiga pripada",
+        "items": {
+          "type": "string",
+          "title": "Žanr",
+          "description": "Jedan žanr"
+        }
+      },
+      "primjerci": {
+        "type": "array",
+        "title": "Primjerci",
+        "description": "Popis dostupnih primjeraka (broj primjerka i dostupnost)",
+        "required": [
+          "dostupnost",
+          "broj_primjerka"
+        ],
+        "items": {
+          "type": "object",
+          "title": "Primjerak",
+          "description": "Jedan primjerak knjige",
+          "properties": {
+            "dostupnost": {
+              "type": "string",
+              "title": "Dostupnost",
+              "description": "Dostupnost pojedine knjige"
+            },
+            "broj_primjerka": {
+              "type": "number",
+              "title": "Broj primjerka",
+              "description": "Broj primjerak pojedine knjige"
+            }
+          }
+        }
+      },
+      "broj_stranica": {
+        "type": "number",
+        "title": "Broj stranica",
+        "description": "Broj stranica pojedine knjige"
+      },
+      "godina_izdanja": {
+        "type": "number",
+        "title": "Godina izdanja",
+        "description": "Godina izdanja pojedine knjige"
+      },
+      "mjesto_izdanja": {
+        "type": "string",
+        "title": "Mjesto izdanja",
+        "description": "Mjesto izdanja pojedine knjige"
+      }
+    }
+  }
+>>>>>>> e6e2a3043341e7142b8819ae73e9201b35f2030a
 }
