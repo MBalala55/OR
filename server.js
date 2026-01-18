@@ -17,6 +17,67 @@ const pool = new Pool({
     port: process.env.DB_PORT,
 });
 
+// pretvara retke iz baze u JSON-LD
+function mapRowsToBooks(rows, baseUrl) {
+    const books = new Map();
+
+    rows.forEach(r => {
+        if (!books.has(r.id)) {
+            books.set(r.id, {
+                "@context": "https://schema.org",
+                "@type": "Book",
+                "@id": `${baseUrl}/api/knjige/${r.id}`,
+                identifier: r.id,
+                name: r.naziv,
+                author: r.autor ? { "@type": "Person", name: r.autor } : undefined,
+                isbn: r.isbn || undefined,
+                inLanguage: r.jezik || undefined,
+                publisher: r.izdavac ? { "@type": "Organization", name: r.izdavac } : undefined,
+                genre: [],
+                numberOfPages: r.broj_stranica || undefined,
+                datePublished: r.godina_izdanja ? String(r.godina_izdanja) : undefined,
+                contentLocation: r.mjesto_izdanja ? { "@type": "Place", name: r.mjesto_izdanja } : undefined,
+                offers: []
+            });
+        }
+
+        const book = books.get(r.id);
+
+        if (r.zanr && !book.genre.includes(r.zanr)) {
+            book.genre.push(r.zanr);
+        }
+
+        if (r.broj_primjerka || r.dostupnost) {
+            const exists = book.offers.some(p => p.serialNumber === r.broj_primjerka);
+            if (!exists) {
+                const availabilityStatus = r.dostupnost === 'Dostupna' 
+                    ? 'https://schema.org/InStock' 
+                    : 'https://schema.org/OutOfStock';
+                
+                book.offers.push({ 
+                    "@type": "Offer",
+                    "serialNumber": r.broj_primjerka,
+                    "availability": availabilityStatus
+                });
+            }
+        }
+    });
+
+    return Array.from(books.values()).map(b => {
+        const cleaned = { ...b };
+
+        if (!cleaned.genre.length) delete cleaned.genre;
+        if (cleaned.genre && cleaned.genre.length === 1) cleaned.genre = cleaned.genre[0];
+        if (!cleaned.offers.length) delete cleaned.offers;
+
+        Object.keys(cleaned).forEach(key => {
+            if (cleaned[key] === undefined) delete cleaned[key];
+        });
+
+        return cleaned;
+    });
+}
+
 const config = {
   authRequired: false,
   auth0Logout: true,
@@ -25,6 +86,8 @@ const config = {
   clientID: process.env.AUTH0_CLIENT_ID,
   issuerBaseURL: process.env.AUTH0_ISSUER_BASE_URL
 };
+
+const BASE_URL = process.env.AUTH0_BASE_URL || `http://localhost:${PORT}`;
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
@@ -177,7 +240,7 @@ app.get('/datacsv', async (req, res) => {
 
 // ~ LAB 3 ~
 
-// a)
+// a) JSON-LD ItemList svih knjiga
 app.get('/api/knjige', async (req, res) => {
     try {
         const upit = `SELECT k.*, z.naziv_zanra AS zanr, p.broj_primjerka, p.dostupnost
@@ -186,12 +249,14 @@ app.get('/api/knjige', async (req, res) => {
                             LEFT JOIN primjerci p ON k.id = p.knjiga_id
                             ORDER BY k.id`;
 
-        const rez = await pool.query(upit);
-        
+        const { rows } = await pool.query(upit);
+        const books = mapRowsToBooks(rows, BASE_URL);
+
         res.status(200).json({
-            "status": "OK",
-            "message": "Dohvaćene sve knjige",
-            "response": rez.rows
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            numberOfItems: books.length,
+            itemListElement: books
         });
 
     } catch (err) {
@@ -204,7 +269,7 @@ app.get('/api/knjige', async (req, res) => {
     }
 });
 
-// b)
+// b) JSON-LD Book za pojedini ID
 app.get('/api/knjige/:id', async (req, res) => {
     try {
         const { id } = req.params;
@@ -223,9 +288,9 @@ app.get('/api/knjige/:id', async (req, res) => {
                             LEFT JOIN primjerci p ON k.id = p.knjiga_id
                         WHERE k.id = $1`;
 
-        const rez = await pool.query(upit, [id]);
+        const { rows } = await pool.query(upit, [id]);
 
-        if (rez.rows.length === 0) {
+        if (!rows.length) {
             return res.status(404).json({
                 "status": "Not Found",
                 "message": "Knjiga s tim ID-om ne postoji",
@@ -233,11 +298,8 @@ app.get('/api/knjige/:id', async (req, res) => {
             });
         }
 
-        res.status(200).json({
-            "status": "OK",
-            "message": "Knjiga s traženim ID-om je pronađena",
-            "response": rez.rows
-        });
+        const [book] = mapRowsToBooks(rows, BASE_URL);
+        res.status(200).json(book);
 
     } catch (err) {
         console.error(err);
